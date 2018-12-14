@@ -1,5 +1,6 @@
 import React from 'react';
 import Reply from '../reply/reply_container';
+import NotifyBtn from '../notify_button/notify_container';
 import moment from 'moment';
 
 
@@ -13,6 +14,7 @@ const FormIndexItem = ({ post }) => {
               <div className="time">{moment(post.createdAt).fromNow(true)} ago</div>
               <div className="name">{post.user.name}</div>
               <Reply username={post.user.name}/>
+              <NotifyBtn />
           </div>
       </div>
     </div>

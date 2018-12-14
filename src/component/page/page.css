@@ -22,6 +22,10 @@
   justify-content: space-between;
 }
 
+.formItem:hover .reply {
+  visibility: visible;
+}
+
 .formleft{
   border: 1px solid black;
   width: 20%;
@@ -57,8 +61,10 @@ text-decoration: underline;
 }
 
 .reply{
+visibility: hidden;
 padding: 10px;
 color: grey;
+cursor:pointer
 }
 
 
