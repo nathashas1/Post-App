@@ -19,6 +19,7 @@ render() {
 
       return (
         <FormIndexItem
+        key={post.id}
           post={post}/>
       );
     });

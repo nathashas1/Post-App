@@ -10,7 +10,9 @@ class Form extends React.Component {
 
 
   handleChange(e){
+    if (this.props.formText.length <= 140){
     this.props.setFormText(e.target.value)
+    }
   }
 
   handleClick() {
@@ -18,9 +20,9 @@ class Form extends React.Component {
       e.preventDefault();
       let post;
       if (this.props.formText[0] === "@"){
-         post = {data:this.props.formText, user: this.props.currentUser, public:false}
+         post = {id: Date.now(), createdAt: Date.now(), data:this.props.formText, user: this.props.currentUser, public:false}
       } else {
-         post = {data:this.props.formText, user: this.props.currentUser, public:true}
+         post = {id: Date.now(), createdAt: Date.now(), data:this.props.formText, user: this.props.currentUser, public:true}
       }
       this.props.createPost(post);
       this.props.setFormText("")
