@@ -1,4 +1,5 @@
 import React from 'react';
+import Reply from '../reply/reply_container';
 
 
 
@@ -11,7 +12,7 @@ const FormIndexItem = ({ post }) => {
           <div className="details">
               <div className="time">posted 10 min ago</div>
               <div className="name">{post.user.name}</div>
-              <div className="reply"><i className="fa fa-reply"></i></div>
+              <Reply username={post.user.name}/>
           </div>
       </div>
     </div>

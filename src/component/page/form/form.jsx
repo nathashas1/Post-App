@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +16,12 @@ class Form extends React.Component {
   handleClick() {
     return (e) => {
       e.preventDefault();
-      const post = {data:this.props.formText, user: this.props.currentUser}
+      let post;
+      if (this.props.formText[0] === "@"){
+         post = {data:this.props.formText, user: this.props.currentUser, public:false}
+      } else {
+         post = {data:this.props.formText, user: this.props.currentUser, public:true}
+      }
       this.props.createPost(post);
       this.props.setFormText("")
 

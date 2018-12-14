@@ -14,15 +14,23 @@ const addUsersToPosts = (posts, users) => {
   return posts;
 }
 
-const filter = (posts) => {
+
+const filter = (posts, type) => {
+  if (type === "all"){
+  // posts  = posts
+} else if (type === "public") {
   posts  = posts.filter(post => post.public)
+} else {
+  posts  = posts.filter(post => !post.public)
+}
   return posts;
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({ posts, users, type }) => {
+  const postsWithUsers = addUsersToPosts(posts, users)
+  const filteredPosts = filter(postsWithUsers,type)
   return {
-    posts: addUsersToPosts(state.posts, state.users)
-    // posts: state.post
+    posts: filteredPosts
   };
 };
 

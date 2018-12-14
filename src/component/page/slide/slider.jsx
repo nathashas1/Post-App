@@ -7,43 +7,54 @@ export default class Slider extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      images: [
-        "http://zenandsomething.files.wordpress.com/2014/06/day7-131.jpg?w=356&h=236",
-        "http://www.tuppensmarine.com/photos/model/large/77df3056e7a2d6a9fa06f288d69ace8.jpg",
-        "http://www.tuppensmarine.com/photos/model/large/248ba47d5ee372211e60aaf943aa322.jpg",
-      ],
+      images: [],
       currentIndex: 0
     }
+  }
 
+  componentDidMount() {
+    this.getJson().then(res => {
+      this.setState({images: res},
+        () => console.log(this.state)
+      )
+    })
   }
 
   goToPrevSlide = () => {
-    if (this.state.currentIndex === 2){
-        this.setState({currentIndex: 0})
-    }else{
-      this.setState({currentIndex: this.state.currentIndex+1})
-    }
+    this.setState({currentIndex: this.state.currentIndex-1})
   }
 
   goToNextSlide = () => {
-    if (this.state.currentIndex === 0){
-        this.setState({currentIndex: 2})
-    }else{
-    this.setState({currentIndex: this.state.currentIndex-1})
-    }
+    this.setState({currentIndex: this.state.currentIndex+1})
   }
 
+  async getJson() {
+    const res = await fetch("/slideshow.json");
+    return await res.json();
+  }
+
+
+
   render() {
+    console.log("image", this.state.currentIndex)
+    const leftArrow = this.state.currentIndex <= 0 ?
+      "" : (<LeftArrow
+       goToPrevSlide={this.goToPrevSlide}
+       hidden={this.state.currentIndex}
+      />)
+
+      const rightArrow = this.state.currentIndex >= this.state.images.length - 1 ?
+        "" : (<RightArrow
+         goToNextSlide={this.goToNextSlide}
+         hidden={this.state.currentIndex}
+        />)
+
+    const image = this.state.images.length === 0 ? "" : this.state.images[this.state.currentIndex]
     return (
       <div className="slider">
-            <Slide key={this.state.currentIndex} image={this.state.images[this.state.currentIndex]} />
-        <LeftArrow
-         goToPrevSlide={this.goToPrevSlide}
-        />
-
-        <RightArrow
-         goToNextSlide={this.goToNextSlide}
-        />
+            <Slide key={this.state.currentIndex} image={image.url} title={image.title}/>
+        {leftArrow}
+        {rightArrow}
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Notify from '../notify';
 import Form from '../form/form_container';
-import Type from '../type/type';
+import Type from '../type/type_container';
 import FormIndexItem from '../form/form_index_item';
 import SlideShow from '../slide/slider';
 import '../page.css'
@@ -14,21 +14,6 @@ class Page extends React.Component {
     console.log("props", this.props)
   }
 
-  componentDidMount() {
-   // this.props.fetchPosts(this.state);
-   }
-
-
-  // handleChange(e){
-  //   this.setState({text: e.target.value})
-  // }
-  //
-  // handleClick() {
-  //   return (e) => {
-  //     e.preventDefault();
-  //     this.props.createPost();
-  //   };
-  // }
 
 render() {
   const posts = this.props.posts.map(post => {
