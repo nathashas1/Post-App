@@ -19,7 +19,7 @@ class Form extends React.Component {
     return (e) => {
       e.preventDefault();
       let post;
-      if (this.props.formText[0] === "@"){
+      if (this.props.type === "private"){
          post = {id: Date.now(), createdAt: Date.now(), data:this.props.formText, user: this.props.currentUser, public:false}
       } else {
          post = {id: Date.now(), createdAt: Date.now(), data:this.props.formText, user: this.props.currentUser, public:true}
