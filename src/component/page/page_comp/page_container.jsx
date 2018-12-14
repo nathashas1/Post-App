@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import React from 'react';
-import { createPost } from '../../redux/actions/actions';
+// import React from 'react';
+import { createPost } from '../../../redux/actions/actions';
 import Page from './page';
 
 
@@ -20,7 +20,6 @@ const filter = (posts) => {
 }
 
 const mapStateToProps = (state) => {
-console.log("pos", state)
   return {
     posts: addUsersToPosts(state.posts, state.users)
     // posts: state.post

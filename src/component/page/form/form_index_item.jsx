@@ -5,7 +5,7 @@ import React from 'react';
 const FormIndexItem = ({ post }) => {
   return (
     <div className="formItem">
-      <img className="formleft" src={post.user.photo} />
+      <img className="formleft" src={post.user.photo} alt=""/>
       <div className="formright">
           <div className="data">{post.data}</div>
           <div className="details">

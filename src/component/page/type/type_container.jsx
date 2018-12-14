@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { createPost } from '../../redux/actions/actions';
-import Form from './form';
+import { createPost } from '../../../redux/actions/actions';
+import Form from '../form/form';
 
 
 const mapStateToProps = ({ errors }) => {

@@ -1,10 +1,10 @@
 import React from 'react';
-import Notify from './notify';
-import Form from './form_container';
-import Type from './type';
-import FormIndexItem from './form_index_item';
-import SlideShow from './slide_show';
-import './page.css'
+import Notify from '../notify';
+import Form from '../form/form_container';
+import Type from '../type/type';
+import FormIndexItem from '../form/form_index_item';
+import SlideShow from '../slide/slider';
+import '../page.css'
 
 
 class Page extends React.Component {

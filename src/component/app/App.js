@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  Page from '../page/page_container';
+import  Page from '../page/page_comp/page_container';
 // import '../App.css';
 
 class App extends Component {

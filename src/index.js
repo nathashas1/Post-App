@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         {user: 3,public: false, data:"An sed feugiat scripserit, te vide quidam tamquam vis, ex dicit oblique pri. Everti inimicus id eum, no soluta reprimique mel."}
       ],
     users: {
-      1: {username: "john", photo: "https:randomuser.me/api/portraits/med/men/67.jpg"},
-      2: {username: "mary", photo: "https:randomuser.me/api/portraits/med/men/65.jpg"},
-      3: {username: "nico", photo: "https:randomuser.me/api/portraits/med/men/66.jpg"}
+      1: {name: "john", photo: "https:randomuser.me/api/portraits/med/men/67.jpg"},
+      2: {name: "mary", photo: "https:randomuser.me/api/portraits/med/men/65.jpg"},
+      3: {name: "nico", photo: "https:randomuser.me/api/portraits/med/men/66.jpg"}
     }
   }
   console.log("this is state", preloadedState)

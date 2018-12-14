@@ -160,3 +160,19 @@ color: grey;
 }
 
 .typeOne:hover { background-color: #8c8c8c; }
+
+.backArrow{
+  position: relative;
+  bottom: 110px;
+  left: 8px;
+  color: #737373;
+  font-size:34px
+}
+
+.nextArrow{
+  position: relative;
+  bottom: 152px;
+  left: 238px;
+  color: #737373;
+  font-size:34px
+}
