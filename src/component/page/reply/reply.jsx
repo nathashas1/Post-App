@@ -1,5 +1,4 @@
 import React from 'react';
-import Form from '../form/form';
 
 class Reply extends React.Component {
   constructor(props) {
@@ -11,7 +10,7 @@ class Reply extends React.Component {
   handleChange(e){
     this.props.setFormText("@"+e+": ")
   }
-  
+
 render() {
     return (
       <div className="reply" onClick={()=>this.handleChange(this.props.username)}>

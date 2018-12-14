@@ -15,7 +15,6 @@ export default class Slider extends Component {
   componentDidMount() {
     this.getJson().then(res => {
       this.setState({images: res},
-        () => console.log(this.state)
       )
     })
   }
@@ -36,7 +35,6 @@ export default class Slider extends Component {
 
 
   render() {
-    console.log("image", this.state.currentIndex)
     const leftArrow = this.state.currentIndex <= 0 ?
       "" : (<LeftArrow
        goToPrevSlide={this.goToPrevSlide}
@@ -52,8 +50,8 @@ export default class Slider extends Component {
     const image = this.state.images.length === 0 ? "" : this.state.images[this.state.currentIndex]
     return (
       <div className="slider">
-            <Slide key={this.state.currentIndex} image={image.url} title={image.title}/>
         {leftArrow}
+        <Slide  key={this.state.currentIndex} image={image.url} title={image.title}/>
         {rightArrow}
       </div>
     );

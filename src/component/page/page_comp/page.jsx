@@ -11,7 +11,6 @@ class Page extends React.Component {
   constructor(props) {
     super(props);
     this.state = {filter: "all"};
-    console.log("props", this.props)
   }
 
 

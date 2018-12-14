@@ -4,7 +4,6 @@ class Type extends React.Component {
   constructor(props) {
     super(props);
     this.state = {filter: "all"};
-    console.log("in type", this.props)
   }
 
 setFilterType(type){
@@ -16,7 +15,6 @@ setFilterType(type){
 
 
 render() {
-  console.log("in type", this.props)
       return (
       <div className="type">
         <button className="typeOne" value="all" onClick={this.setFilterType("all")}>

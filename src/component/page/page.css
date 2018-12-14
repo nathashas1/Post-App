@@ -96,9 +96,7 @@ color: grey;
   padding: 20px;
 }
 
-.slideimg{
-  width: 100%
-}
+
 
 .imageTitle{
   display: flex;
@@ -151,20 +149,35 @@ color: grey;
 
 .typeOne:hover { background-color: #8c8c8c; }
 
+.slider{
+  display: flex;
+}
+
+.slideimg{
+  width: 100%;
+
+}
+
 .backArrow{
   position: relative;
-  bottom: 110px;
-  left: 8px;
+  width: 0;
+  left: 10px;
   color: #737373;
-  font-size:34px
+  font-size:34px;
+  top:120px;
+}
+
+.backArrow > *, .nextArrow > * {
+  background-color: #fff
 }
 
 .nextArrow{
   position: relative;
-  bottom: 130px;
-  left: 238px;
+  width: 0;
+  right: calc(10px + 24.3px);
   color: #737373;
-  font-size:34px
+  font-size:34px;
+  top:120px;
 }
 
 

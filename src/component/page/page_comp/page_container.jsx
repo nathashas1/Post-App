@@ -1,6 +1,4 @@
 import { connect } from 'react-redux';
-// import React from 'react';
-import { createPost } from '../../../redux/actions/actions';
 import Page from './page';
 
 

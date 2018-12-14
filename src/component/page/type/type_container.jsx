@@ -1,15 +1,8 @@
 import { connect } from 'react-redux';
-import React from 'react';
-import { createPost, setType } from '../../../redux/actions/actions';
+import { setType } from '../../../redux/actions/actions';
 import Type from './type';
 
 
-
-const mapStateToProps = ({ errors }) => {
-  return {
-
-  };
-};
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -17,4 +10,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Type);
+export default connect(null, mapDispatchToProps)(Type);

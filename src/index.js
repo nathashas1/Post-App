@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
       6: {name: "nico", photo: "https:randomuser.me/api/portraits/med/men/64.jpg"}
     }
   }
-  console.log("this is state", preloadedState)
   store = configureStore(preloadedState);
 
   window.post = (post) => store.dispatch(createPost(post));
