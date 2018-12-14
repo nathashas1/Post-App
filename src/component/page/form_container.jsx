@@ -4,10 +4,11 @@ import { createPost, setFormText } from '../../redux/actions/actions';
 import Form from './form';
 
 
-const mapStateToProps = ({ formText }) => {
+const mapStateToProps = ({ formText,currentUser }) => {
 
   return {
-    formText: formText
+    formText,
+    currentUser
   };
 };
 

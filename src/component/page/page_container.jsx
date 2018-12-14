@@ -22,8 +22,8 @@ const filter = (posts) => {
 const mapStateToProps = (state) => {
 console.log("pos", state)
   return {
-    // posts: addUsersToPosts(state.posts, state.users)
-    posts: state.post
+    posts: addUsersToPosts(state.posts, state.users)
+    // posts: state.post
   };
 };
 

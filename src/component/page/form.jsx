@@ -18,7 +18,8 @@ class Form extends React.Component {
   handleClick() {
     return (e) => {
       e.preventDefault();
-      this.props.createPost(this.props.formText);
+      const post = {data:this.props.formText, user: this.props.currentUser}
+      this.props.createPost(post);
       this.props.setFormText("")
 
     };
